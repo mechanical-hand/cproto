@@ -1,0 +1,5 @@
+*.test.cpp
+*.test.o
+*.test.elf
+*.o
+*.a
