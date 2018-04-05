@@ -21,4 +21,16 @@ test: all
 	$(CPP) $(CPPFLAGS) stream_reader.test.cpp -o stream_reader.test.elf
 	./stream_reader.test.elf
 
-.PHONY: all test
+clean:
+	git clean -Xf
+
+release: clean
+	mkdir -p ./tmp
+	cp cproto.cpp tmp
+	cp cproto.hpp tmp
+	cp keywords.txt tmp
+	mv tmp cproto
+	zip -r release.zip cproto
+	rm -rf cproto
+
+.PHONY: all test clean release
