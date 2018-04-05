@@ -1,0 +1,7 @@
+language: cpp
+addons:
+  apt:
+    packages:
+      - cxxtest
+
+script: make test
