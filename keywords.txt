@@ -1,0 +1,5 @@
+cproto KEYWORD1
+stream_reader_base KEYWORD1
+available KEYWORD2
+read_message KEYWORD2
+arduino_stream_reader KEYWORD1
