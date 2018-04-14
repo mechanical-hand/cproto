@@ -33,6 +33,16 @@ namespace cproto
             }
         }
 
+        size_t write(unsigned char* a, size_t size)
+        {
+            m_data.reserve(m_data.size() + size);
+            for(size_t i = 0; i < size; ++i)
+            {
+                m_data.push_back(a[i]);
+            }
+            return size;
+        }
+
         fake_arduino_stream(std::vector<unsigned char> data) : m_data(data), m_index(0){}
     // Left it public for testing purposes
     //private:
