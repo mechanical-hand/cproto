@@ -2,7 +2,6 @@
 #ifndef ARDUINO
 
 #include <vector>
-#include <iostream>
 
 namespace cproto
 {
@@ -22,7 +21,6 @@ namespace cproto
         unsigned char read()
         {
             unsigned char elem = peek();
-            std::cout << (unsigned int)elem << ",";
             m_index++;
             return elem;
         }
@@ -33,7 +31,6 @@ namespace cproto
             {
                 buf[i] = read();
             }
-            std::cout << std::endl;
         }
 
         fake_arduino_stream(std::vector<unsigned char> data) : m_data(data), m_index(0){}
